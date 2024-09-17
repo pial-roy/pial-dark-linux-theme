@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+#landing {
+    text-align: center;
+    padding: 50px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00ff00;
+}
+
+h1, h2 {
+    color: #00ff00;
+}
+
+#skills {
+    padding: 20px;
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    background-color: #1e1e1e; /* Dark background */
+}
+
+.skillset {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.skill-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ff00;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    text-align: center;
+    margin: 0 15px;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.skill p {
+    color: #00ff00;
+    margin-top: 5px;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
+    50% { transform: scale(1.05) translate(-50%, -50%); opacity: 1; }
+    100% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+}
+
+@keyframes zoomOut {
+    0% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+    50% { transform: scale(1.05) translate(-50%, -50%); opacity: 0; }
+    100% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
+}
+
+#experience, #projects, #contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 20px;
+}
